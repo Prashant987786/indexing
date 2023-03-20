@@ -1,0 +1,85 @@
+body{
+    background-image: url("../images/bg_w.jpg");
+    background-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+label{
+    direction: rtl;
+}
+h2{
+    text-align: center;
+}
+.btn_submit{
+    margin-right: 2%;
+    box-shadow: 20px 20px 50px grey;
+}
+
+.ffdb{
+    margin-top: 2%;  
+
+}
+.btn_submit{
+    right: 10%;
+    direction: rtl;
+}
+.lb::after{
+    margin-bottom: 0.5%;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+.footer-body{
+    margin: 0;
+
+}
+.profile-photo{
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.cu_img{
+    left: 0px;
+    top: 0px;
+    margin-right: 10%;
+    text-align: right;
+}
+
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    z-index: -1;
+    background-color: white;
+  }
+  
+  /* Control the right side */
+  .right {
+    top: 15%;
+    right: 10%;
+    background-image: url("../images/contact_us.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 450px;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
