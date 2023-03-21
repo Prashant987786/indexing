@@ -1,21 +1,93 @@
 <%- include("partials/header.ejs") %>
 
-<div class="col-md-4">
-    
+<div class="container category">
+
+    <form id="post_method" action="/home" method="post">
+    <div class="row">
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" onclick="jS()" name="btn" value="education" type="submit">Education</button>
+        </div>
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" name="btn" value="finance" type="submit">Finance</button>
+        </div>
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" name="btn" value="food" type="submit">Food</button>
+        </div>
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" name="btn" value="gadgets" type="submit">Gadgets</button>
+        </div>
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" name="btn" value="lifestyle" type="submit">LifeStyle</button>
+        </div>
+        <div class="col-md-2 home">
+            <button class="w-100 btn btn-lg btn-primary btn_submit home_btn" name="btn" value="medical" type="submit">Medical</button>
+        </div>
+    </form>
 </div>
-    
-
-<div class="btn-group-vertical">
-    <button class="btn btn-dark" type="submit">Education</button>
-    <button class="btn btn-dark" type="submit">Life style</button>
-    <button class="btn btn-dark" type="submit">Gadgets</button>
-    <button class="btn btn-dark" type="submit">Food</button>
-    <button class="btn btn-dark" type="submit">Finance</button>
-    <button class="btn btn-dark" type="submit">Medical</button>
-
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h5>Category</h5>
+        </div>
+    
+        <div class="col-md-3">
+            <h5>Brand Name</h5>
+        </div>
+        <div class="col-md-3">
+            <h5>Website</h5>
+        </div>
+        <div class="col-md-3">
+            <h5>Description</h5>
+        </div>
+    </div>
+    <% for (var i = 0; i < Item.length; i++){ %>
+    <div class="row">
+        <div class="col-md-3">
+            <p><%= Item[i].category %></p>
+        </div>
+        <div class="col-md-3">
+            <p><%= Item[i].brandName %></p>
+        </div>
+        <div class="col-md-3">
+            <a href="https://<%= Item[i].website %>/"><%= Item[i].website %></a>
+        </div>
+        <div class="col-md-3">
+            <p><%= Item[i].description %></p>
+        </div>
+    </div>
+<%  } %>
+</div>
+    <!-- <div class="row">
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image1.jpg" alt="image1" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image2.jpg" alt="image1" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image3.jpg" alt="image1" height="100%" width="100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image4.jpg" alt="image1" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image5.jpg" alt="image1" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 home">
+            <img class="home_img" src="images/image6.jpg" alt="image1" height="100%" width="100%">
+        </div>
+    </div>
+</div> -->
 
 
+<script>
+    document.body.style.backgroundImage = "none";
+    //document.body.style.backgroundImage = "url('../images/contact_us.jpg')";
+</script>
+<script src="js/index.js"></script>
 
 <%- include("partials/footer.ejs") %>

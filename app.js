@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
+const { json } = require("body-parser");
 const app = express();
 
 
@@ -17,13 +18,26 @@ const indexingSchema = {
 }
 const Item = mongoose.model("Item", indexingSchema);
 
+async function getItems(name){
+
+    const Items = await Item.find({category:name});
+    return Items;
+      
+}
+
+const defaultitems = [{
+    category:"LifeStyle",
+    brandName:"Myntra",
+    website:"www.myntra.com",
+    description:"clothes shopping website"
+}];
 
 app.get("/", function(req, res){
     res.render("indexing");
 });
 
 app.get("/home", function(req, res){
-    res.render("home");
+    res.render("home", {Item :defaultitems });
 });
 
 app.get("/about", function(req, res){
@@ -49,10 +63,16 @@ app.post("/", function(req, res){
 
 
 
-
-
-
-
+app.post("/home", function (req, res) {
+    const name =req.body.btn;
+    console.log(name);
+    getItems(name).then(function(foundItems){
+        res.render("home", {Item: foundItems});
+        console.log(foundItems);
+    }).catch(function(err){
+        console.log(err);
+    });
+});
 
 
 

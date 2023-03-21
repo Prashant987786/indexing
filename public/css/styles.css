@@ -6,34 +6,52 @@ body{
 label{
     direction: rtl;
 }
-h2{
+h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
-.btn_submit{
+.row{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img:hover{
+    opacity: 0.5;
+}
+.btn{
     margin-right: 2%;
-    box-shadow: 20px 20px 50px grey;
+
 }
 
+.btn:hover {
+    background-color: #1e1f1e;
+    color: white;
+}
 .ffdb{
     margin-top: 2%;  
 
 }
-.btn_submit{
-    right: 10%;
-    direction: rtl;
+.contact_btn{
+    bottom: 0%;
+    box-shadow: 20px 20px 50px grey;
+    transition: 0.3s;
+    margin-top: 7%;
 }
-.lb::after{
-    margin-bottom: 0.5%;
+.home_btn{
+    border-radius: 0;
 }
-
 .footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
+    margin-top: 6%;
+    text-align: center;
 }
-.footer-body{
-    margin: 0;
 
-}
 .profile-photo{
     border-radius: 50%;
     margin-top: 2%;
@@ -48,38 +66,17 @@ h2{
     text-align: right;
 }
 
-/* Split the screen in half */
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  /* Control the left side */
-  .left {
-    left: 0;
-    z-index: -1;
-    background-color: white;
-  }
-  
-  /* Control the right side */
-  .right {
-    top: 15%;
-    right: 10%;
-    background-image: url("../images/contact_us.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 450px;
-  }
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+.contact_us{
+    display: inline;
+    margin-top: 2%;
+    bottom: 0%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 2%;
+}
+.home{
+    padding: 0;
+}
+.category{
+    margin-top: 2%;
+}
